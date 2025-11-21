@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Taste Space</title>
+    <style>
+        /* Basic reset */
+        html, body { margin:0; padding:0; }
+
+        :root{ --nav-text: #654321; --nav-color: #ffdc8f; --box-bg: #fff7d4; }
+
+        /* Background image (scrollable) */
+        body {
+            background-image: url(HOME.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 200vh; /* allow scrolling */
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            color: var(--nav-text);
+        }
+
+        /* Navigation */
+        .nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            /* Make nav background the same as box background */
+            background: var(--box-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            z-index: 40;
+        }
+        .nav-inner { width: 92%; max-width: 1100px; display:flex; gap:12px; align-items:center; padding:10px 0; }
+        /* Make all links use the same site font color */
+        a { color: var(--nav-text); }
+        .nav a { text-decoration:none; padding:8px 14px; font-weight:600; border-radius:8px; }
+        .nav a:hover { background: rgba(0,0,0,0.04); }
+
+        /* Sections / boxes */
+        .page { width:92%; max-width:1100px; margin:32px auto; }
+        /* Push the About box downward so it doesn't cover the main image title */
+        #about { margin-top: 140px; }
+        @media (max-width:720px) { #about { margin-top: 32px; } }
+        .box { background: var(--box-bg); color: var(--nav-text); border-radius:12px; padding:28px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); margin-bottom:28px; }
+        /* Make the second (content) box larger */
+        #content.box { min-height: 460px; }
+        /* Keep boxes visible over background; user can style colors later */
+
+        /* Make anchors land below sticky nav */
+        section { scroll-margin-top: 72px; }
+
+        @media (max-width:640px){ .nav-inner{ justify-content:center; } .nav a{ padding:10px 12px; } }
+        @media (max-width:640px){ #content.box { min-height: 260px; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="#about">About Us</a>
+            <a href="#content">Content</a>
+            <a href="#socials">Socials</a>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section id="about" class="box">
+            <!-- About box - navigation target -->
+            <h2>About Us</h2>
+            <p>Taste Space is a small group that loves food and loves the internet just as much. We stumble across new viral hacks and trends, and instead of just watching them, we actually try them out. Sometimes they work, sometimes they fail, but either way, it’s always fun (and usually most of them are delicious).</p>
+            <p>Taste Space is our fun zone where we share our experience with you. We taste and react honestly so you’ll know which trends are worth trying at home.</p>
+        </section>
+
+        <section id="content" class="box">
+            <!-- Content box - navigation target (left blank per request) -->
+        </section>
+
+        <section id="socials" class="box">
+            <!-- Socials box - navigation target -->
+            <h2>Socials</h2>
+            <p>Connect with Taste Space on social media platforms:</p>
+            <ul>
+                <li><a href="mailto:tastespace40@gmail.com" target="_blank" rel="noopener">
+    tastespace40@gmail.com</a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+            </ul>
+        </section>
+</head>
+        <footer>
+    <p>© 2025 Group 4 — Taste Space</p>  
+  </footer>
+    </main>
+</body>
+</html>
