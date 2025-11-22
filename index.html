@@ -33,13 +33,16 @@
             z-index: 40;
         }
         .nav-inner {
-            width: auto;
-            max-width: none;
+            width: 92%;
+            max-width: 1100px;
+            margin: 0 auto;
             display: flex;
             gap: 12px;
             align-items: center;
-            padding: 10px 0 10px 24px;
+            padding: 10px 0 10px 0;
             justify-content: flex-start;
+            /* Add left offset for nav links */
+            padding-left: 48px;
         }
         /* Make all links use the same site font color */
         a { color: var(--nav-text); }
