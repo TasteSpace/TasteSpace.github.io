@@ -26,13 +26,21 @@
             position: sticky;
             top: 0;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             /* Make nav background the same as box background */
             background: var(--box-bg);
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             z-index: 40;
         }
-        .nav-inner { width: 92%; max-width: 1100px; display:flex; gap:12px; align-items:center; padding:10px 0; }
+        .nav-inner {
+            width: auto;
+            max-width: none;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 10px 0 10px 24px;
+            justify-content: flex-start;
+        }
         /* Make all links use the same site font color */
         a { color: var(--nav-text); }
         .nav a { text-decoration:none; padding:8px 14px; font-weight:600; border-radius:8px; }
@@ -74,7 +82,11 @@
         </section>
 
         <section id="content" class="box">
-            <!-- Content box - navigation target (left blank per request) -->
+            <!-- Content box - navigation target -->
+            <video controls style="width:100%;max-width:700px;display:block;margin:0 auto;">
+                <source src="PromotionaVid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
 
         <section id="socials" class="box">
