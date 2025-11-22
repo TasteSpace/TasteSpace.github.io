@@ -17,7 +17,7 @@
             background-position: center;
             background-repeat: no-repeat;
             min-height: 200vh; /* allow scrolling */
-            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
             color: var(--nav-text);
         }
 
@@ -55,6 +55,8 @@
         #about { margin-top: 140px; }
         @media (max-width:720px) { #about { margin-top: 32px; } }
         .box { background: var(--box-bg); color: var(--nav-text); border-radius:12px; padding:28px; box-shadow: 0 8px 20px rgba(0,0,0,0.06); margin-bottom:28px; }
+        /* Navigation uses Times New Roman (Times); rest of site uses Comic Sans (body) */
+        .nav, .nav-inner, .nav a { font-family: 'Times New Roman', Times, serif; }
         /* Make the second (content) box larger */
         #content.box { min-height: 460px; }
         /* Keep boxes visible over background; user can style colors later */
@@ -99,8 +101,7 @@
             <ul>
                 <li><a href="mailto:tastespace40@gmail.com" target="_blank" rel="noopener">
     tastespace40@gmail.com</a></li>
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a></li>
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://www.instagram.com/tast3_space/" target="_blank" rel="noopener">Instagram</a></li>
             </ul>
         </section>
 </head>
